@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="filters">
-        <button id="filter">familie</button>
-        <button id="filter">volwassenen</button>
+
+    <input id="searchBar" type="search" placeholder=""  style="background-color: rgb(232, 237, 244);">
+    <div id="searchContainer">
+        
     </div>
-    
+    <div id="filters">
+        <div class="bigfilter">
+            <button id="familie" class="filter">familie</button>
+            <button id="volwassenen" class="filter">volwassenen</button>
+        </div>
+        <div class="smallfilter">
+            <button id="theater" class="filter">theater</button>
+            <button id="literatuur" class="filter">literatuur</button>
+            <button id="muziektheater" class="filter">muziektheater</button>
+            <button id="dans" class="filter">dans</button>
+            <button id="comedy" class="filter">comedy</button>
+            <button id="figurentheater" class="filter">figurentheater</button>
+            <button id="opera" class="filter">opera</button>
+            <button id="multidisciplinair" class="filter">multidisciplinair</button>
+            <button id="concert" class="filter">concert</button>
+            <button id="circus" class="filter">circus</button>
+        </div>
+    </div>
+
     <div id="containerToFill">
-        <div id="voorstelling">
-            <h3></h3>
-            <p></p>
-            <p></p>
-            <p></p>
-            </div>
+
     </div>
     <script src="./index.js"></script>
 </body>
+
 </html>
+
