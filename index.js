@@ -1,7 +1,4 @@
-const containerToFill = document.getElementById('containerToFill');
-const searchContainer = document.getElementById('searchContainer');
 let jsonData;
-let filters = document.querySelectorAll('.filter');
 
 //fetching the data from the json and filling the page
 fetch('./entries.json')
@@ -14,6 +11,7 @@ fetch('./entries.json')
 //function that fills the page with cards, takes an array of objects as a parameter    
 let fillPage = (data) => {
     for (content of data) {
+        const containerToFill = document.getElementById('containerToFill');
         containerToFill.insertAdjacentHTML('afterbegin',
             `<div id="voorstelling" class="${content['category']}">
             <img src="${undefinedFilter(content.thumbnail.url)}">
@@ -83,6 +81,7 @@ let filterFunctionality = (activeFilters) => {
 let searchFunctionality = (data, query) => {
     let searchResult;
     if(query !== ""){
+        const searchContainer = document.getElementById('searchContainer');
         searchContainer.innerHTML = "";
         searchResult = data.filter(item => searchFilter(query, item));
         searchResult.map( item => {
@@ -116,6 +115,7 @@ document.getElementById('searchBar').onkeyup = async function(){
   };
 
 //implements the filter functionality 
+let filters = document.querySelectorAll('.filter');
 for (button of filters) {
     button.onclick = function () {
         this.classList.toggle("active");
